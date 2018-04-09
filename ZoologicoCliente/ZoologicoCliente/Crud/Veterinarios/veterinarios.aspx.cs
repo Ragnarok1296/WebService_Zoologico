@@ -95,4 +95,9 @@ public partial class Crud_Cuidadores_veterinarios : System.Web.UI.Page {
 
     }
 
+
+    protected void btnRevision_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Crud/Agendar/agendar.aspx");
+    }
 }

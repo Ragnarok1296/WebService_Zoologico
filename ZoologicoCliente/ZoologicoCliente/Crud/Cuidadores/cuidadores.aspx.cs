@@ -97,4 +97,9 @@ public partial class Crud_Cuidadores_cuidadores : System.Web.UI.Page {
 
     }
 
+
+    protected void btnCuida_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Crud/Cuida/asignar.aspx");
+    }
 }

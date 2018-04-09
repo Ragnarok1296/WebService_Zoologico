@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Dynamic;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,9 @@ public partial class Crud_Agendar_agendar_insertar_actualizar : System.Web.UI.Pa
 
                 datosRevisiones obj = (datosRevisiones)Session["DataRevisiones"];
 
+                llenarListVeterinarios();
+                llenarListAnimales();
+
                 if (obj != null) {
 
                     txtbId.Text = obj.Id.ToString();
@@ -26,12 +30,15 @@ public partial class Crud_Agendar_agendar_insertar_actualizar : System.Web.UI.Pa
                     txtbTratamiento.Text = obj.Tratamiento;
                     txtbObservaciones.Text = obj.Observaciones;
                     txtbEstatus.Text = obj.Estatus;
-                    txtbIDAnimal.Text = obj.Id_animal.ToString();
-                    txtbIDVeterinario.Text = obj.Id_veterinario.ToString();
+                    ddlAnimal.SelectedValue = obj.Id_animal.ToString();
+                    ddlIDVeterinario.SelectedValue = obj.Id_veterinario.ToString();
                     txtbConcentrado.Text = obj.Concentrado.ToString();
 
                     txtbId.ReadOnly = true;
                     btnInsertar.Text = "Actualizar";
+
+                    ddlIDAnimal.SelectedIndex = ddlAnimal.SelectedIndex;
+                    ddlIDVeterinario.SelectedIndex = ddlVeterinario.SelectedIndex;
 
                 } else
                     btnInsertar.Text = "Insertar";
@@ -50,6 +57,9 @@ public partial class Crud_Agendar_agendar_insertar_actualizar : System.Web.UI.Pa
 
         try {
 
+            ddlIDAnimal.SelectedIndex = ddlAnimal.SelectedIndex;
+            ddlIDVeterinario.SelectedIndex = ddlVeterinario.SelectedIndex;
+
             DateTime fechaIngreso = Convert.ToDateTime(txtbFechaIngreso.Text);
             DateTime fechaSalida = Convert.ToDateTime(txtbFechaSalida.Text);
 
@@ -64,8 +74,8 @@ public partial class Crud_Agendar_agendar_insertar_actualizar : System.Web.UI.Pa
                 myObject.tratamiento = txtbTratamiento.Text;
                 myObject.observaciones = txtbObservaciones.Text;
                 myObject.estatus = txtbEstatus.Text;
-                myObject.id_animal = Convert.ToInt32(txtbIDAnimal.Text);
-                myObject.id_veterinario = Convert.ToInt32(txtbIDVeterinario.Text);
+                myObject.id_animal = Convert.ToInt32(ddlIDAnimal.SelectedItem.Text);
+                myObject.id_veterinario = Convert.ToInt32(ddlIDVeterinario.SelectedItem.Text);
                 myObject.concentrado = Convert.ToInt32(txtbConcentrado.Text);
                 string json = JsonConvert.SerializeObject(myObject);
 
@@ -91,6 +101,64 @@ public partial class Crud_Agendar_agendar_insertar_actualizar : System.Web.UI.Pa
 
         }
 
-    } 
+    }
+
+    private void llenarListAnimales()
+    {
+
+        try
+        {
+            WSAnimales.WS_AnimalesClient clientAnimales = new WSAnimales.WS_AnimalesClient();
+            string fileJSON = clientAnimales.consultaAnimales();
+            DataTable dt = (DataTable)JsonConvert.DeserializeObject(fileJSON, typeof(DataTable));
+
+            foreach (DataRow row in dt.Rows)
+            {
+
+                string descripcion = Convert.ToString(row["nombre"]);
+                ddlAnimal.Items.Add(descripcion);
+                string id = Convert.ToString(row["id"]);
+                ddlIDAnimal.Items.Add(id);
+
+            }
+
+        }
+        catch (Exception ex)
+        {
+
+            Response.Write("<script language=javascript> alert('" + ex.Message + "'); </script>");
+
+        }
+
+    }
+
+    private void llenarListVeterinarios()
+    {
+
+        try
+        {
+            WSVeterinarios.WS_VeterinariosClient clientVeterinarios = new WSVeterinarios.WS_VeterinariosClient();
+            string fileJSON = clientVeterinarios.consultaVeterinarios();
+            DataTable dt = (DataTable)JsonConvert.DeserializeObject(fileJSON, typeof(DataTable));
+
+            foreach (DataRow row in dt.Rows)
+            {
+
+                string descripcion = Convert.ToString(row["nombre"]);
+                ddlVeterinario.Items.Add(descripcion);
+                string id = Convert.ToString(row["id"]);
+                ddlIDVeterinario.Items.Add(id);
+
+            }
+
+        }
+        catch (Exception ex)
+        {
+
+            Response.Write("<script language=javascript> alert('" + ex.Message + "'); </script>");
+
+        }
+
+    }
 
 }

@@ -42,12 +42,14 @@
 
     <div class="form-group"> <!-- id_animal -->
         <label for="id_animal" class="control-label">Animal</label>
-        <asp:TextBox ID="txtbIDAnimal" runat="server" type="text" class="form-control" name="id_animal" placeholder="Animal" MaxLength="11" TextMode="Number"></asp:TextBox>
+        <asp:DropDownList CssClass="form-control" ID="ddlAnimal" runat="server"></asp:DropDownList>
+        <asp:DropDownList CssClass="form-control" ID="ddlIDAnimal" runat="server" Visible="false"></asp:DropDownList>
     </div>   
 
     <div class="form-group"> <!-- id_veterinario -->
         <label for="id_veterinario" class="control-label">Veterinario</label>
-        <asp:TextBox ID="txtbIDVeterinario" runat="server" type="text" class="form-control" name="id_veterinario" placeholder="Veterinario" MaxLength="11" TextMode="Number"></asp:TextBox>
+        <asp:DropDownList CssClass="form-control" ID="ddlVeterinario" runat="server"></asp:DropDownList>
+        <asp:DropDownList CssClass="form-control" ID="ddlIDVeterinario" runat="server" Visible="false"></asp:DropDownList>
     </div>   
 
     <div class="form-group"> <!-- concentrado -->

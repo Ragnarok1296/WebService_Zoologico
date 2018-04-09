@@ -63,7 +63,10 @@
 
     <div class="form-group"> <!-- pres_prop -->
         <label for="pres_prop" class="control-label">Prestado o Propiedad</label>
-        <asp:TextBox ID="txtbPresProp" runat="server" type="text" class="form-control" placeholder="Prestado o Permanente (PER)" MaxLength="5"></asp:TextBox>
+        <asp:DropDownList CssClass="form-control" ID="ddlPres" runat="server">
+            <asp:ListItem>Permanente</asp:ListItem>
+            <asp:ListItem>Prestado</asp:ListItem>
+        </asp:DropDownList>
     </div>   
     
     <br />

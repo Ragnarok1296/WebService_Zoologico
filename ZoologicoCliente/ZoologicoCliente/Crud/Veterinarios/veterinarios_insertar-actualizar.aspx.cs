@@ -51,13 +51,14 @@ public partial class Crud_Cuidadores_veterinarips_insertar_actualizar : System.W
             myObject.nombre = txtbNombre.Text;
             myObject.apellidos = txtbApellidos.Text;
             myObject.especialidad = txtbEspecialidad.Text;
-            myObject.f_ingreso = txtbFechaIngreso.Text;
+            myObject.fecha_ingreso = txtbFechaIngreso.Text;
             myObject.salario = Convert.ToDecimal(txtbSalario.Text);
             string json = JsonConvert.SerializeObject(myObject);
-
+            
+            
             WSVeterinarios.WS_VeterinariosClient client = new WSVeterinarios.WS_VeterinariosClient();
             String respuesta = "1";
-
+            
             if (btnInsertar.Text == "Actualizar")  
                 respuesta = client.actualizarVeterinarios("[" + json + "]");  
             else if (btnInsertar.Text == "Insertar") 
@@ -67,7 +68,7 @@ public partial class Crud_Cuidadores_veterinarips_insertar_actualizar : System.W
                 Response.Redirect("veterinarios.aspx");
             else
                 Response.Write("<script language=javascript> alert('" + respuesta + "'); </script>");
-
+                
 
         } catch (Exception ex) {
 

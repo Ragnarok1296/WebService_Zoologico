@@ -33,7 +33,11 @@ public partial class Crud_Animales_animales_insertar_actualizart : System.Web.UI
                     txtbSexo.Text = obj.Sexo;
                     txtbNivelRiesgo.Text = obj.Nivel_riesgo;
                     ddlHabitat.SelectedValue = obj.Id_habitad;
-                    txtbPresProp.Text = obj.Pres_prop;
+
+                    if (obj.Pres_prop.Equals("Prestado"))
+                        ddlPres.SelectedValue = "Prestado";
+                    else if (obj.Pres_prop.Equals("Permanente"))
+                        ddlPres.SelectedValue = "Permanente";
 
                     btnInsertar.Text = "Actualizar";
                     txtbId.ReadOnly = true;
@@ -57,6 +61,12 @@ public partial class Crud_Animales_animales_insertar_actualizart : System.Web.UI
         try {
             ddlID.SelectedIndex = ddlHabitat.SelectedIndex;
 
+            String prestado = "PER5";
+            if (ddlPres.SelectedValue.Equals("Permanente"))
+                prestado = "PER5";
+            else if (ddlPres.SelectedValue.Equals("Prestado"))
+                prestado = "PER3";
+
             dynamic myObject = new ExpandoObject();
             myObject.id = Convert.ToInt32(txtbId.Text);
             myObject.nombre = txtbNombre.Text;
@@ -69,7 +79,7 @@ public partial class Crud_Animales_animales_insertar_actualizart : System.Web.UI
             myObject.sexo = txtbSexo.Text;
             myObject.nivel_riesgo = txtbNivelRiesgo.Text;
             myObject.id_habitad = ddlID.SelectedItem.Text;
-            myObject.pres_prop = txtbPresProp.Text;
+            myObject.pres_prop = prestado;
             myObject.imagen = "ejem";
             string json = JsonConvert.SerializeObject(myObject);
             

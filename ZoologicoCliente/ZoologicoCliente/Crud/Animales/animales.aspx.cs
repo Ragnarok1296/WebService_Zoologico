@@ -125,6 +125,12 @@ public partial class Crud_Animales_animales : System.Web.UI.Page {
 
                 }
 
+                if (grid_row.Cells[11].Text.Equals("PER5"))
+                    grid_row.Cells[11].Text = "Permanente";
+                else
+                    grid_row.Cells[11].Text = "Prestado";
+
+
             }
 
         } catch (Exception ex) {
@@ -279,4 +285,14 @@ public partial class Crud_Animales_animales : System.Web.UI.Page {
 
     }
 
+
+    protected void btnCuida_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Crud/Cuida/asignar.aspx");
+    }
+
+    protected void btnRevision_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Crud/Agendar/agendar.aspx");
+    }
 }

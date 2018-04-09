@@ -3,6 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
 
     <h1>Tabla de Veterinarios</h1>
+    <div class="form-group floatButton" > <!-- Button -->
+        <asp:Button ID="btnRevision" runat="server" Text="Revision" class="btn btn-warning" center-align="true" OnClick="btnRevision_Click" />
+    </div>
     <br />
 
     <asp:GridView ID="GridView_Veterinarios" runat="server"

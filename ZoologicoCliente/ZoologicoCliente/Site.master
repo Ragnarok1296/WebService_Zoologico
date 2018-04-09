@@ -54,6 +54,7 @@
                         <li><a runat="server" href="~/Crud/Habitats/habitats">Habitats</a></li>
                         <li><a runat="server" href="~/Crud/Cuidadores/cuidadores">Cuidadores</a></li>
                         <li><a runat="server" href="~/Crud/Veterinarios/veterinarios">Veterinarios</a></li>
+                        <li><a runat="server" href="~/Crud/Cuida/asignar">Asignar</a></li>
                         <li><a runat="server" href="~/Crud/Agendar/agendar">Agendar revisiones</a></li>
                         <li><a runat="server" href="~/Crud/Reportes/reportes">Reportes</a></li>
                     </ul>

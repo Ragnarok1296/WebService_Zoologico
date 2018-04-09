@@ -1,7 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="cuidadores.aspx.cs" Inherits="Crud_Cuidadores_cuidadores" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
+    
     <h1>Tabla de Cuidadores</h1>
+    <div class="form-group floatButton" > <!-- Button -->
+        <asp:Button ID="btnAsigna" runat="server" Text="Asignar" class="btn btn-success" center-align="true" OnClick="btnCuida_Click" />
+    </div>
     <br />
 
     <asp:GridView ID="GridView_Cuidadores" runat="server"

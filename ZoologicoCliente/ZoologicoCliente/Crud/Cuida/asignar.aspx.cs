@@ -8,25 +8,30 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Crud_Agendar_agendar : System.Web.UI.Page {
+public partial class Crud_Cuida_asignar : System.Web.UI.Page {
 
-    WSRevisiones.WS_RevisionesClient client;
+    WSCuida.WS_CuidaClient client;
 
-    protected void Page_Load(object sender, EventArgs e) {
+    protected void Page_Load(object sender, EventArgs e)
+    {
 
-        try {
+        try
+        {
 
-            client = new WSRevisiones.WS_RevisionesClient();
-            string fileJSON = client.consultaRevisiones();
+            client = new WSCuida.WS_CuidaClient();
+            string fileJSON = client.consultaCuida();
             DataTable dt = (DataTable)JsonConvert.DeserializeObject(fileJSON, typeof(DataTable));
-            GridView_Revisiones.DataSource = dt;
-            if (!IsPostBack) {
-                GridView_Revisiones.DataBind();
+            GridView_Cuida.DataSource = dt;
+            if (!IsPostBack)
+            {
+                GridView_Cuida.DataBind();
                 cambiarContenidoAnimal();
-                cambiarContenidoVeterinario();
+                cambiarContenidoCuidador();
             }
 
-        } catch (Exception ex) {
+        }
+        catch (Exception ex)
+        {
 
             Response.Write("<script language=javascript> alert('" + ex.Message + "'); </script>");
 
@@ -34,8 +39,9 @@ public partial class Crud_Agendar_agendar : System.Web.UI.Page {
 
     }
 
-    protected void GridView_Revisiones_RowCommand(object sender, GridViewCommandEventArgs e) {
-        
+    protected void GridView_Cuida_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+
         /*String respuesta;
 
         try {
@@ -86,42 +92,49 @@ public partial class Crud_Agendar_agendar : System.Web.UI.Page {
 
     }
 
-    protected void GridView_Revisiones_PageIndexChanging(object sender, GridViewPageEventArgs e) {
+    protected void GridView_Cuida_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
 
-        GridView_Revisiones.PageIndex = e.NewPageIndex;
-        GridView_Revisiones.DataBind();
+        GridView_Cuida.PageIndex = e.NewPageIndex;
+        GridView_Cuida.DataBind();
 
     }
 
-    protected void btnInsertar_Click(object sender, EventArgs e) {
+    protected void btnInsertar_Click(object sender, EventArgs e)
+    {
 
-        datosRevisiones obj = new datosRevisiones();
+        datosCuida obj = new datosCuida();
         obj = null;
-        Session["DataRevisiones"] = obj;
-        Response.Redirect("agendar_insertar-actualizar.aspx");
+        Session["DataCuida"] = obj;
+        Response.Redirect("asignar_insertar-actualizar.aspx");
 
     }
 
-    private void cambiarContenidoAnimal() {
-        try {
+    private void cambiarContenidoAnimal()
+    {
+        try
+        {
 
             WSAnimales.WS_AnimalesClient clientAnimal = new WSAnimales.WS_AnimalesClient();
             string fileJSON = clientAnimal.consultaAnimales();
             DataTable dt = (DataTable)JsonConvert.DeserializeObject(fileJSON, typeof(DataTable));
 
-            foreach (GridViewRow grid_row in GridView_Revisiones.Rows) {
+            foreach (GridViewRow grid_row in GridView_Cuida.Rows)
+            {
 
-                foreach (DataRow data_row in dt.Rows) {
+                foreach (DataRow data_row in dt.Rows)
+                {
 
-                    if (grid_row.Cells[7].Text.Equals(Convert.ToString(data_row["id"])))
-                        grid_row.Cells[7].Text = Convert.ToString(data_row["nombre"]);
+                    if (grid_row.Cells[2].Text.Equals(Convert.ToString(data_row["id"])))
+                        grid_row.Cells[2].Text = Convert.ToString(data_row["nombre"]);
 
                 }
 
             }
 
         }
-        catch (Exception ex) {
+        catch (Exception ex)
+        {
 
             Response.Write("<script language=javascript> alert('" + ex.Message + "'); </script>");
 
@@ -129,23 +142,23 @@ public partial class Crud_Agendar_agendar : System.Web.UI.Page {
 
     }
 
-    private void cambiarContenidoVeterinario()
+    private void cambiarContenidoCuidador()
     {
         try
         {
 
-            WSVeterinarios.WS_VeterinariosClient clientVeterinario = new WSVeterinarios.WS_VeterinariosClient();
-            string fileJSON = clientVeterinario.consultaVeterinarios();
+            WSCuidadores.WS_CuidadoresClient clientCuidador = new WSCuidadores.WS_CuidadoresClient();
+            string fileJSON = clientCuidador.consultaCuidadores();
             DataTable dt = (DataTable)JsonConvert.DeserializeObject(fileJSON, typeof(DataTable));
 
-            foreach (GridViewRow grid_row in GridView_Revisiones.Rows)
+            foreach (GridViewRow grid_row in GridView_Cuida.Rows)
             {
 
                 foreach (DataRow data_row in dt.Rows)
                 {
 
-                    if (grid_row.Cells[8].Text.Equals(Convert.ToString(data_row["id"])))
-                        grid_row.Cells[8].Text = Convert.ToString(data_row["nombre"]);
+                    if (grid_row.Cells[1].Text.Equals(Convert.ToString(data_row["id"])))
+                        grid_row.Cells[1].Text = Convert.ToString(data_row["nombre"]);
 
                 }
 
