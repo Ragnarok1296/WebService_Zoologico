@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WS_Zoologico/" targetNamespace="http://WS_Zoologico/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarCuidadores" type="tns:actualizarCuidadores" />
+  <xs:element name="actualizarCuidadoresResponse" type="tns:actualizarCuidadoresResponse" />
+  <xs:element name="consultaCuidadores" type="tns:consultaCuidadores" />
+  <xs:element name="consultaCuidadoresResponse" type="tns:consultaCuidadoresResponse" />
+  <xs:element name="eliminarCuidadores" type="tns:eliminarCuidadores" />
+  <xs:element name="eliminarCuidadoresResponse" type="tns:eliminarCuidadoresResponse" />
+  <xs:element name="insertarCuidadores" type="tns:insertarCuidadores" />
+  <xs:element name="insertarCuidadoresResponse" type="tns:insertarCuidadoresResponse" />
+  <xs:complexType name="eliminarCuidadores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarCuidadoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaCuidadores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="consultaCuidadoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCuidadores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarCuidadoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCuidadores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCuidadoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

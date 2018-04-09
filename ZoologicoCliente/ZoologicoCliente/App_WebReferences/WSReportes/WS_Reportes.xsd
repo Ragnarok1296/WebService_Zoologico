@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WS_Zoologico/" targetNamespace="http://WS_Zoologico/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="reporteAnimalesPermanentes" type="tns:reporteAnimalesPermanentes" />
+  <xs:element name="reporteAnimalesPermanentesResponse" type="tns:reporteAnimalesPermanentesResponse" />
+  <xs:element name="reporteAnimalesPrestados" type="tns:reporteAnimalesPrestados" />
+  <xs:element name="reporteAnimalesPrestadosResponse" type="tns:reporteAnimalesPrestadosResponse" />
+  <xs:element name="reporteCuidadores" type="tns:reporteCuidadores" />
+  <xs:element name="reporteCuidadoresResponse" type="tns:reporteCuidadoresResponse" />
+  <xs:complexType name="reporteAnimalesPrestados">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteAnimalesPrestadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteCuidadores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteCuidadoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteAnimalesPermanentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteAnimalesPermanentesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,38 @@
+﻿.imagenAnimales {
+    background-image: url(../Resources/Backgrounds/Animales.jpg); 
+    background-size: cover;
+}
+
+.imagenHabitats {
+    background-image: url(../Resources/Backgrounds/Habitats.jpg);
+    background-size: cover;
+}
+
+.imagenCuidadores {
+    background-image: url(../Resources/Backgrounds/Cuidadores.jpg);
+    background-size: cover;
+}
+
+.imagenVeterinarios {
+    background-image: url(../Resources/Backgrounds/Veterinarios.jpg);
+    background-size: cover;
+}
+
+*.white {
+    background: rgba(0,0,0,.4);
+    border-radius: 10px;
+    padding: 1em;
+    color:white;
+}
+
+.white h2 {
+    color: white;
+}
+
+.white h3 {
+    color: white;
+}
+
+.white li {
+    color: white;
+}

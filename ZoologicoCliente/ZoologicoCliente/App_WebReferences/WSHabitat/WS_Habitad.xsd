@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WS_Zoologico/" targetNamespace="http://WS_Zoologico/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarHabitad" type="tns:actualizarHabitad" />
+  <xs:element name="actualizarHabitadResponse" type="tns:actualizarHabitadResponse" />
+  <xs:element name="consultaHabitad" type="tns:consultaHabitad" />
+  <xs:element name="consultaHabitadResponse" type="tns:consultaHabitadResponse" />
+  <xs:element name="eliminarHabitad" type="tns:eliminarHabitad" />
+  <xs:element name="eliminarHabitadResponse" type="tns:eliminarHabitadResponse" />
+  <xs:element name="insertarHabitad" type="tns:insertarHabitad" />
+  <xs:element name="insertarHabitadResponse" type="tns:insertarHabitadResponse" />
+  <xs:complexType name="eliminarHabitad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarHabitadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultaHabitad">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="consultaHabitadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarHabitad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarHabitadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarHabitad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarHabitadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

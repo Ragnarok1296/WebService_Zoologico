@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WS_Zoologico/" targetNamespace="http://WS_Zoologico/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="consultaCuida" type="tns:consultaCuida" />
+  <xs:element name="consultaCuidaResponse" type="tns:consultaCuidaResponse" />
+  <xs:element name="insertarCuida" type="tns:insertarCuida" />
+  <xs:element name="insertarCuidaResponse" type="tns:insertarCuidaResponse" />
+  <xs:complexType name="consultaCuida">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="consultaCuidaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCuida">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCuidaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

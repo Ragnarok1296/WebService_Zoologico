@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WS_Zoologico/" targetNamespace="http://WS_Zoologico/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="consultarInformacionAnimal" type="tns:consultarInformacionAnimal" />
+  <xs:element name="consultarInformacionAnimalResponse" type="tns:consultarInformacionAnimalResponse" />
+  <xs:element name="consultarInformacionRevisiones" type="tns:consultarInformacionRevisiones" />
+  <xs:element name="consultarInformacionRevisionesResponse" type="tns:consultarInformacionRevisionesResponse" />
+  <xs:complexType name="consultarInformacionRevisiones">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarInformacionRevisionesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarInformacionAnimal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarInformacionAnimalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

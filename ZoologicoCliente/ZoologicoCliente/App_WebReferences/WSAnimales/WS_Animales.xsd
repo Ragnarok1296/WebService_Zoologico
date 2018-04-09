@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WS_Zoologico/" targetNamespace="http://WS_Zoologico/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarAnimales" type="tns:actualizarAnimales" />
+  <xs:element name="actualizarAnimalesResponse" type="tns:actualizarAnimalesResponse" />
+  <xs:element name="consultaAnimales" type="tns:consultaAnimales" />
+  <xs:element name="consultaAnimalesResponse" type="tns:consultaAnimalesResponse" />
+  <xs:element name="eliminarAnimales" type="tns:eliminarAnimales" />
+  <xs:element name="eliminarAnimalesResponse" type="tns:eliminarAnimalesResponse" />
+  <xs:element name="insertarAnimales" type="tns:insertarAnimales" />
+  <xs:element name="insertarAnimalesResponse" type="tns:insertarAnimalesResponse" />
+  <xs:complexType name="consultaAnimales">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="consultaAnimalesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAnimales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAnimalesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAnimales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAnimalesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAnimales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAnimalesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
