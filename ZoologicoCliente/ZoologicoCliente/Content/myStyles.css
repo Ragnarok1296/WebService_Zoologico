@@ -18,11 +18,14 @@
     background-size: cover;
 }
 
-*.white {
+.white {
     background: rgba(0,0,0,.4);
     border-radius: 10px;
     padding: 1em;
-    color:white;
+}
+
+.white h1 {
+    color: white;
 }
 
 .white h2 {
@@ -39,4 +42,14 @@
 
 .floatButton {
     float:right;
+}
+
+.white label {
+    color:white;
+}
+
+#floatDivFirst {
+}
+
+#floatDivSecond {
 }

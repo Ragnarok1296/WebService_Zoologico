@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/Content/myStyles.css" type="text/css" />
 
 </head>
-<body style="background-image: url(../Resources/Backgrounds/Selva.jpg); background-attachment: fixed;">
+<body style="background-image: url(/Resources/Backgrounds/zoologico.jpg); background-attachment: fixed;">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
