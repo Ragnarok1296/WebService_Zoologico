@@ -9,12 +9,16 @@ using System.Data;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Dynamic;
+using Gma.QrCodeNet.Encoding;
+using Gma.QrCodeNet.Encoding.Windows.Render;
 
 
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.Diagnostics;
 using iTextSharp.text.html.simpleparser;
+using System.Drawing.Imaging;
+using System.Drawing;
 
 public partial class Crud_Animales_animales : System.Web.UI.Page {
 
@@ -164,6 +168,20 @@ public partial class Crud_Animales_animales : System.Web.UI.Page {
     {
         try
         {
+
+            QrEncoder qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
+            QrCode qrCode = new QrCode();
+            qrEncoder.TryEncode(obj.Nombre, out qrCode);
+
+            GraphicsRenderer renderer = new GraphicsRenderer(new FixedCodeSize(400, QuietZoneModules.Zero), Brushes.Black, Brushes.White);
+
+            MemoryStream ms = new MemoryStream();
+
+            renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, ms);
+            var imageTemporal = new Bitmap(ms);
+            var imagen = new Bitmap(imageTemporal, new Size(new Point(200, 200)));
+            
+            
             dynamic myObject = new ExpandoObject();
             myObject.idAnimal = Convert.ToInt32(obj.Id);
             string json = JsonConvert.SerializeObject(myObject);
@@ -187,6 +205,7 @@ public partial class Crud_Animales_animales : System.Web.UI.Page {
 
             StringWriter sw = new StringWriter();
             HtmlTextWriter hw = new HtmlTextWriter(sw);
+
 
             hw.WriteLine("Expediente");
             hw.WriteBreak();

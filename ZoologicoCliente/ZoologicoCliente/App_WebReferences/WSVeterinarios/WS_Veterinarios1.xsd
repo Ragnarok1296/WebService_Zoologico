@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://WS_Zoologico/" targetNamespace="http://WS_Zoologico/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarVeterinarios" type="tns:actualizarVeterinarios" />
+  <xs:element name="actualizarVeterinariosResponse" type="tns:actualizarVeterinariosResponse" />
+  <xs:element name="consultaVeterinarios" type="tns:consultaVeterinarios" />
+  <xs:element name="consultaVeterinariosResponse" type="tns:consultaVeterinariosResponse" />
+  <xs:element name="eliminarVeterinarios" type="tns:eliminarVeterinarios" />
+  <xs:element name="eliminarVeterinariosResponse" type="tns:eliminarVeterinariosResponse" />
+  <xs:element name="insertarVeterinarios" type="tns:insertarVeterinarios" />
+  <xs:element name="insertarVeterinariosResponse" type="tns:insertarVeterinariosResponse" />
+  <xs:complexType name="consultaVeterinarios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="consultaVeterinariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarVeterinarios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarVeterinariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarVeterinarios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarVeterinariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarVeterinarios">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="json" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarVeterinariosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

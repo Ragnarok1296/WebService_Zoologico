@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/ZoologicoServer/WS_Habitad?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.43.145:8080/ZoologicoServer/WS_Habitad?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WS_Habitad.wsdl" MetadataType="Wsdl" ID="600e7c09-91d7-4837-aa50-679dd57e6002" SourceId="1" SourceUrl="http://localhost:8080/ZoologicoServer/WS_Habitad?WSDL" />
-    <MetadataFile FileName="WS_Habitad.xsd" MetadataType="Schema" ID="72bbb19c-7969-43db-85ce-065ad8578d21" SourceId="1" SourceUrl="http://localhost:8080/ZoologicoServer/WS_Habitad?xsd=1" />
+    <MetadataFile FileName="WS_Habitad1.xsd" MetadataType="Schema" ID="90a34b33-d629-4b23-a5b0-f8030ec83bf9" SourceId="1" SourceUrl="http://192.168.43.145:8080/ZoologicoServer/WS_Habitad?xsd=1" />
+    <MetadataFile FileName="WS_Habitad1.wsdl" MetadataType="Wsdl" ID="c45fb9bc-bec8-461e-8128-c332fdd72212" SourceId="1" SourceUrl="http://192.168.43.145:8080/ZoologicoServer/WS_Habitad?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

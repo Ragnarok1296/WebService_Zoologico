@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/ZoologicoServer/WS_Cuidadores?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.43.145:8080/ZoologicoServer/WS_Cuidadores?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WS_Cuidadores.wsdl" MetadataType="Wsdl" ID="801274c7-cd69-4b47-951f-c715dda25abb" SourceId="1" SourceUrl="http://localhost:8080/ZoologicoServer/WS_Cuidadores?WSDL" />
-    <MetadataFile FileName="WS_Cuidadores.xsd" MetadataType="Schema" ID="d931fb41-9092-4195-bcb7-9dc5b80a2d90" SourceId="1" SourceUrl="http://localhost:8080/ZoologicoServer/WS_Cuidadores?xsd=1" />
+    <MetadataFile FileName="WS_Cuidadores1.xsd" MetadataType="Schema" ID="b5918564-9703-4ba0-953d-8fa62d296f2f" SourceId="1" SourceUrl="http://192.168.43.145:8080/ZoologicoServer/WS_Cuidadores?xsd=1" />
+    <MetadataFile FileName="WS_Cuidadores1.wsdl" MetadataType="Wsdl" ID="24b137b7-62c8-4dcb-95bf-3d6834ffd0c2" SourceId="1" SourceUrl="http://192.168.43.145:8080/ZoologicoServer/WS_Cuidadores?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

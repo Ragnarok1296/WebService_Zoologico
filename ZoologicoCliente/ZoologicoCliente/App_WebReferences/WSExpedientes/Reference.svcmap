@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/ZoologicoServer/WS_Expedientes?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.43.145:8080/ZoologicoServer/WS_Expedientes?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WS_Expedientes.wsdl" MetadataType="Wsdl" ID="cd0eaa67-67cb-4eae-a17d-fda78f3b75ef" SourceId="1" SourceUrl="http://localhost:8080/ZoologicoServer/WS_Expedientes?WSDL" />
-    <MetadataFile FileName="WS_Expedientes.xsd" MetadataType="Schema" ID="37acfff9-0437-46b5-b2b0-71762b1ed1a8" SourceId="1" SourceUrl="http://localhost:8080/ZoologicoServer/WS_Expedientes?xsd=1" />
+    <MetadataFile FileName="WS_Expedientes1.xsd" MetadataType="Schema" ID="d5f1fe77-e053-4142-b9c2-38454209ca7a" SourceId="1" SourceUrl="http://192.168.43.145:8080/ZoologicoServer/WS_Expedientes?xsd=1" />
+    <MetadataFile FileName="WS_Expedientes1.wsdl" MetadataType="Wsdl" ID="1d41ea3a-6847-4912-a942-d795c16e021a" SourceId="1" SourceUrl="http://192.168.43.145:8080/ZoologicoServer/WS_Expedientes?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

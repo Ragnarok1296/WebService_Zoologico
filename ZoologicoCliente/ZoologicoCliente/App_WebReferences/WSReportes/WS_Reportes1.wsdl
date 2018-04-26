@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WS_Zoologico/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WS_Reportes" targetNamespace="http://WS_Zoologico/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.43.145:8080/ZoologicoServer/WS_Reportes?xsd=1" namespace="http://WS_Zoologico/" />
+    </xsd:schema>
+  </types>
+  <message name="reporteAnimalesPermanentes">
+    <part name="parameters" element="tns:reporteAnimalesPermanentes" />
+  </message>
+  <message name="reporteAnimalesPermanentesResponse">
+    <part name="parameters" element="tns:reporteAnimalesPermanentesResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="reporteAnimalesPrestados">
+    <part name="parameters" element="tns:reporteAnimalesPrestados" />
+  </message>
+  <message name="reporteAnimalesPrestadosResponse">
+    <part name="parameters" element="tns:reporteAnimalesPrestadosResponse" />
+  </message>
+  <message name="reporteCuidadores">
+    <part name="parameters" element="tns:reporteCuidadores" />
+  </message>
+  <message name="reporteCuidadoresResponse">
+    <part name="parameters" element="tns:reporteCuidadoresResponse" />
+  </message>
+  <portType name="WS_Reportes">
+    <operation name="reporteAnimalesPermanentes">
+      <input wsam:Action="http://WS_Zoologico/WS_Reportes/reporteAnimalesPermanentesRequest" message="tns:reporteAnimalesPermanentes" />
+      <output wsam:Action="http://WS_Zoologico/WS_Reportes/reporteAnimalesPermanentesResponse" message="tns:reporteAnimalesPermanentesResponse" />
+      <fault wsam:Action="http://WS_Zoologico/WS_Reportes/reporteAnimalesPermanentes/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="reporteAnimalesPrestados">
+      <input wsam:Action="http://WS_Zoologico/WS_Reportes/reporteAnimalesPrestadosRequest" message="tns:reporteAnimalesPrestados" />
+      <output wsam:Action="http://WS_Zoologico/WS_Reportes/reporteAnimalesPrestadosResponse" message="tns:reporteAnimalesPrestadosResponse" />
+      <fault wsam:Action="http://WS_Zoologico/WS_Reportes/reporteAnimalesPrestados/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="reporteCuidadores">
+      <input wsam:Action="http://WS_Zoologico/WS_Reportes/reporteCuidadoresRequest" message="tns:reporteCuidadores" />
+      <output wsam:Action="http://WS_Zoologico/WS_Reportes/reporteCuidadoresResponse" message="tns:reporteCuidadoresResponse" />
+      <fault wsam:Action="http://WS_Zoologico/WS_Reportes/reporteCuidadores/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="WS_ReportesPortBinding" type="tns:WS_Reportes">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="reporteAnimalesPermanentes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="reporteAnimalesPrestados">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="reporteCuidadores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="WS_Reportes">
+    <port name="WS_ReportesPort" binding="tns:WS_ReportesPortBinding">
+      <soap:address location="http://192.168.43.145:8080/ZoologicoServer/WS_Reportes" />
+    </port>
+  </service>
+</definitions>

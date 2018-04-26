@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/ZoologicoServer/WS_Reportes?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.43.145:8080/ZoologicoServer/WS_Reportes?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WS_Reportes.xsd" MetadataType="Schema" ID="db76b671-56d7-4c92-a430-fb0d519bbd4c" SourceId="1" SourceUrl="http://localhost:8080/ZoologicoServer/WS_Reportes?xsd=1" />
-    <MetadataFile FileName="WS_Reportes.wsdl" MetadataType="Wsdl" ID="c6757af6-2670-4183-98ee-e31bfc066e91" SourceId="1" SourceUrl="http://localhost:8080/ZoologicoServer/WS_Reportes?WSDL" />
+    <MetadataFile FileName="WS_Reportes1.xsd" MetadataType="Schema" ID="f7e6a7fb-9ca9-4e7b-8b48-f9a56df14e2b" SourceId="1" SourceUrl="http://192.168.43.145:8080/ZoologicoServer/WS_Reportes?xsd=1" />
+    <MetadataFile FileName="WS_Reportes1.wsdl" MetadataType="Wsdl" ID="db08ec2a-4fa3-40b6-b34c-dc66acd84b71" SourceId="1" SourceUrl="http://192.168.43.145:8080/ZoologicoServer/WS_Reportes?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

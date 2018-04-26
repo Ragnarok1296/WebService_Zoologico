@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://WS_Zoologico/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WS_Animales" targetNamespace="http://WS_Zoologico/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://192.168.43.145:8080/ZoologicoServer/WS_Animales?xsd=1" namespace="http://WS_Zoologico/" />
+    </xsd:schema>
+  </types>
+  <message name="consultaAnimales">
+    <part name="parameters" element="tns:consultaAnimales" />
+  </message>
+  <message name="consultaAnimalesResponse">
+    <part name="parameters" element="tns:consultaAnimalesResponse" />
+  </message>
+  <message name="insertarAnimales">
+    <part name="parameters" element="tns:insertarAnimales" />
+  </message>
+  <message name="insertarAnimalesResponse">
+    <part name="parameters" element="tns:insertarAnimalesResponse" />
+  </message>
+  <message name="eliminarAnimales">
+    <part name="parameters" element="tns:eliminarAnimales" />
+  </message>
+  <message name="eliminarAnimalesResponse">
+    <part name="parameters" element="tns:eliminarAnimalesResponse" />
+  </message>
+  <message name="actualizarAnimales">
+    <part name="parameters" element="tns:actualizarAnimales" />
+  </message>
+  <message name="actualizarAnimalesResponse">
+    <part name="parameters" element="tns:actualizarAnimalesResponse" />
+  </message>
+  <portType name="WS_Animales">
+    <operation name="consultaAnimales">
+      <input wsam:Action="http://WS_Zoologico/WS_Animales/consultaAnimalesRequest" message="tns:consultaAnimales" />
+      <output wsam:Action="http://WS_Zoologico/WS_Animales/consultaAnimalesResponse" message="tns:consultaAnimalesResponse" />
+    </operation>
+    <operation name="insertarAnimales">
+      <input wsam:Action="http://WS_Zoologico/WS_Animales/insertarAnimalesRequest" message="tns:insertarAnimales" />
+      <output wsam:Action="http://WS_Zoologico/WS_Animales/insertarAnimalesResponse" message="tns:insertarAnimalesResponse" />
+    </operation>
+    <operation name="eliminarAnimales">
+      <input wsam:Action="http://WS_Zoologico/WS_Animales/eliminarAnimalesRequest" message="tns:eliminarAnimales" />
+      <output wsam:Action="http://WS_Zoologico/WS_Animales/eliminarAnimalesResponse" message="tns:eliminarAnimalesResponse" />
+    </operation>
+    <operation name="actualizarAnimales">
+      <input wsam:Action="http://WS_Zoologico/WS_Animales/actualizarAnimalesRequest" message="tns:actualizarAnimales" />
+      <output wsam:Action="http://WS_Zoologico/WS_Animales/actualizarAnimalesResponse" message="tns:actualizarAnimalesResponse" />
+    </operation>
+  </portType>
+  <binding name="WS_AnimalesPortBinding" type="tns:WS_Animales">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="consultaAnimales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAnimales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAnimales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarAnimales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_Animales">
+    <port name="WS_AnimalesPort" binding="tns:WS_AnimalesPortBinding">
+      <soap:address location="http://192.168.43.145:8080/ZoologicoServer/WS_Animales" />
+    </port>
+  </service>
+</definitions>

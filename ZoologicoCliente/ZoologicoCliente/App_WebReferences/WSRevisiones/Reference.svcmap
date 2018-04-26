@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/ZoologicoServer/WS_Revisiones?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://192.168.43.145:8080/ZoologicoServer/WS_Revisiones?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WS_Revisiones.wsdl" MetadataType="Wsdl" ID="86430829-c26c-4cca-87e6-23b395669a16" SourceId="1" SourceUrl="http://localhost:8080/ZoologicoServer/WS_Revisiones?WSDL" />
-    <MetadataFile FileName="WS_Revisiones.xsd" MetadataType="Schema" ID="6ef2e1f3-751d-46fc-ac54-72f6b0a026cd" SourceId="1" SourceUrl="http://localhost:8080/ZoologicoServer/WS_Revisiones?xsd=1" />
+    <MetadataFile FileName="WS_Revisiones1.xsd" MetadataType="Schema" ID="71f1a14e-f110-4162-a9fe-43c699b8c3fd" SourceId="1" SourceUrl="http://192.168.43.145:8080/ZoologicoServer/WS_Revisiones?xsd=1" />
+    <MetadataFile FileName="WS_Revisiones1.wsdl" MetadataType="Wsdl" ID="4f0bbb13-df4f-496d-8151-33d7bc82a7bc" SourceId="1" SourceUrl="http://192.168.43.145:8080/ZoologicoServer/WS_Revisiones?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

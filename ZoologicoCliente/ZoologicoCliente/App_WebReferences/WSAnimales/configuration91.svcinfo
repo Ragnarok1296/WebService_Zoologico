@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="KSuZRqa2cd8Dgz3abAJ87ikJJcU=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="kqjSKKMC+8nPWlRs6Bj9BxtJIMY=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="WS_AnimalesPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="WS_AnimalesPort" contract="WSAnimales.WS_Animales" bindingType="basicHttpBinding" address="http://localhost:8080/ZoologicoServer/WS_Animales" bindingConfiguration="WS_AnimalesPortBinding">
+    <endpoint name="WS_AnimalesPort" contract="WSAnimales.WS_Animales" bindingType="basicHttpBinding" address="http://192.168.43.145:8080/ZoologicoServer/WS_Animales" bindingConfiguration="WS_AnimalesPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/ZoologicoServer/WS_Animales</serializedValue>
+          <serializedValue>http://192.168.43.145:8080/ZoologicoServer/WS_Animales</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

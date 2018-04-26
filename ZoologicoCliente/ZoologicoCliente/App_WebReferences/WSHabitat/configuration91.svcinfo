@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="CC/i+Zr63gi6j0kMComMI/R2K84=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="SuT7rzj3PonFV/wsr5NXbveM/Zg=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="WS_HabitadPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="WS_HabitadPort" contract="WSHabitat.WS_Habitad" bindingType="basicHttpBinding" address="http://localhost:8080/ZoologicoServer/WS_Habitad" bindingConfiguration="WS_HabitadPortBinding">
+    <endpoint name="WS_HabitadPort" contract="WSHabitat.WS_Habitad" bindingType="basicHttpBinding" address="http://192.168.43.145:8080/ZoologicoServer/WS_Habitad" bindingConfiguration="WS_HabitadPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/ZoologicoServer/WS_Habitad</serializedValue>
+          <serializedValue>http://192.168.43.145:8080/ZoologicoServer/WS_Habitad</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
